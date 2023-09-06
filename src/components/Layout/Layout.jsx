@@ -1,11 +1,17 @@
 import { Container } from '@mui/material';
 import { Header } from 'components/Header/Header';
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
 
-export const Layout = ({ children }) => {
+export const Layout = () => {
   return (
-    <Container fixed={true} sx={{ mt: 9, width: 600 }}>
+    <Container>
       <Header />
-      {children}
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
     </Container>
   );
 };
+
+//  fixed={true} sx={{ mt: 9, width: 600 }}  на Container

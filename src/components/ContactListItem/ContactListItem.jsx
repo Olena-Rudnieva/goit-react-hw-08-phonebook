@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Item } from './ContactListItem.styled';
 import { useDispatch } from 'react-redux';
-import { deleteContacts } from 'redux/operations';
+import { deleteContacts } from 'redux/contacts/operations';
 import { Grid, Typography, IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
@@ -13,7 +13,7 @@ export const ContactListItem = ({ option }) => {
     <Grid item xs={12}>
       <Item>
         <Typography variant="body1" component="span">
-          {option.name}: {option.phone}
+          {option.name}: {option.number}
         </Typography>
 
         <IconButton

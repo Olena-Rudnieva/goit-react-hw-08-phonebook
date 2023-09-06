@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Form } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from 'redux/selectors';
-import { addContacts } from 'redux/operations';
+import { selectContacts } from 'redux/contacts/selectors';
+import { addContacts } from 'redux/contacts/operations';
 import { TextField, Typography, Button } from '@mui/material';
 
 export const ContactForm = () => {
@@ -33,7 +33,7 @@ export const ContactForm = () => {
       return;
     }
 
-    dispatch(addContacts({ name, phone: number }));
+    dispatch(addContacts({ name, number }));
 
     reset();
   };

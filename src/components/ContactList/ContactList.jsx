@@ -1,7 +1,7 @@
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 import { useSelector } from 'react-redux';
 import { Filter } from 'components/Filter/Filter';
-import { selectVisibleContacts } from 'redux/selectors';
+import { selectVisibleContacts } from 'redux/contacts/selectors';
 import { Grid, Typography } from '@mui/material';
 
 export const ContactList = () => {
