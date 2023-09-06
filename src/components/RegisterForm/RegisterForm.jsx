@@ -35,5 +35,3 @@ export const RegisterForm = () => {
     </form>
   );
 };
-
-// autoComplete = 'off';
