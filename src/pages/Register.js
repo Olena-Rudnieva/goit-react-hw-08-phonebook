@@ -1,9 +1,12 @@
+import { Typography } from '@mui/material';
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 
 export default function Register() {
   return (
     <div>
-      <h1>Registration</h1>
+      <Typography variant="h4" align="center" sx={{ mb: 2 }}>
+        Registration
+      </Typography>
       <RegisterForm />
     </div>
   );

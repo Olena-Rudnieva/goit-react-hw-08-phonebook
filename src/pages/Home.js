@@ -1,13 +1,14 @@
+import { Grid, Typography } from '@mui/material';
+import myImage from '../images/phonebook.png';
+
 const Home = () => {
   return (
-    <div>
-      <h1>
-        Task manager welcome page
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </h1>
-    </div>
+    <Grid container justifyContent="center">
+      <Typography variant="h2" align="center" sx={{ mb: 5 }} color="primary">
+        Create your personal Phonebook!
+      </Typography>
+      <img src={myImage} alt="Phonebook" width={300} />
+    </Grid>
   );
 };
 

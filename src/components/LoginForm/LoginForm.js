@@ -1,3 +1,4 @@
+import { Button, Grid, TextField } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 
@@ -18,17 +19,23 @@ export const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Log In</button>
+      <Grid container direction="column" alignItems="center" gap={3}>
+        <TextField
+          label="Email"
+          type="email"
+          name="email"
+          sx={{ width: 250 }}
+        />
+        <TextField
+          label="Password"
+          type="password"
+          name="password"
+          sx={{ width: 250 }}
+        />
+        <Button variant="contained" type="submit">
+          LOG IN
+        </Button>
+      </Grid>
     </form>
   );
 };
-
-// autoComplete = 'off';

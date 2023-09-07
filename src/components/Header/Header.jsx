@@ -1,4 +1,4 @@
-import { AppBar } from '@mui/material';
+import { AppBar, Grid, Toolbar } from '@mui/material';
 import { AuthNav } from 'components/AuthNav/AuthNav';
 import { Navigation } from 'components/Navigation/Navigation';
 import { UserMenu } from 'components/UserMenu/UserMenu';
@@ -10,16 +10,12 @@ export const Header = () => {
 
   return (
     <AppBar>
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
-
-      {/* <Toolbar>
-        <Typography variant="h6" sx={{ my: 2, flexGrow: 1 }}>
-          HOME
-        </Typography>
-        <Button color="inherit">Register</Button>
-        <Button color="inherit">Login</Button>
-      </Toolbar> */}
+      <Toolbar>
+        <Grid container alignItems="center" flexWrap="nowrap">
+          <Navigation />
+          {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        </Grid>
+      </Toolbar>
     </AppBar>
   );
 };

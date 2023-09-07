@@ -1,3 +1,4 @@
+import { Button, Grid, TextField } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 
@@ -19,19 +20,29 @@ export const RegisterForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Username
-        <input type="text" name="name" />
-      </label>
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Register</button>
+      <Grid container direction="column" alignItems="center" gap={3}>
+        <TextField
+          label="Username"
+          type="text"
+          name="name"
+          sx={{ width: 250 }}
+        />
+        <TextField
+          label="Email"
+          type="email"
+          name="email"
+          sx={{ width: 250 }}
+        />
+        <TextField
+          label="Password"
+          type="password"
+          name="password"
+          sx={{ width: 250 }}
+        />
+        <Button variant="contained" type="submit">
+          Register
+        </Button>
+      </Grid>
     </form>
   );
 };

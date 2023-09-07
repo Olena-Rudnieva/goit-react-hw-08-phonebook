@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 
 export const Layout = () => {
   return (
-    <Container>
+    <Container sx={{ mt: 9, width: 600 }}>
       <Header />
       <Suspense fallback={null}>
         <Outlet />
@@ -13,5 +13,3 @@ export const Layout = () => {
     </Container>
   );
 };
-
-//  fixed={true} sx={{ mt: 9, width: 600 }}  на Container
